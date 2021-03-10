@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-example",
-  "version": "0.2.1",
+  "version": "0.0.1",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
@@ -9,7 +9,7 @@
     "dist": "electron-builder --publish always"
   },
   "devDependencies": {
-    "electron": "^3.0.2", 
+    "electron": "^3.0.2",
     "electron-builder": "^20.28.4"
   },
   "dependencies": {
@@ -19,12 +19,14 @@
   "build": {
     "appId": "com.github.iffy.electronupdaterexample",
     "win": {
-      "publish":[{
-        "provider": "github",
-        "owner": "vvnghia06091999",
-        "repo": "ElectronAutoUpdate",
-        "token": "c59fd123aa31e42e0e0ee02708761b07dc310314"
-      }],
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "vvnghia06091999",
+          "repo": "ElectronAutoUpdate",
+          "token": "c59fd123aa31e42e0e0ee02708761b07dc310314"
+        }
+      ],
       "icon": "favicon.ico",
       "target": [
         {

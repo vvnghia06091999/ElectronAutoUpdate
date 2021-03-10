@@ -64,7 +64,7 @@ function createDefaultWindow() {
   win.on('closed', () => {
     win = null;
   });
-  win.loadURL('http://localhost:3035/');
+  win.loadURL(`file://${__dirname}/version.html#v${app.getVersion()}`);
   return win;
 }
 autoUpdater.on('checking-for-update', () => {
