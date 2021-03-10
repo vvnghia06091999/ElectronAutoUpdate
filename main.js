@@ -1,7 +1,7 @@
 // This is free and unencumbered software released into the public domain.
 // See LICENSE for details
 
-const {app, BrowserWindow, Menu, protocol, ipcMain} = require('electron');
+const {app, BrowserWindow, Menu} = require('electron');
 const log = require('electron-log');
 const {autoUpdater} = require("electron-updater");
 
@@ -64,7 +64,7 @@ function createDefaultWindow() {
   win.on('closed', () => {
     win = null;
   });
-  win.loadURL(`file://${__dirname}/version.html#v${app.getVersion()}`);
+  win.loadURL('http://localhost:3035/');
   return win;
 }
 autoUpdater.on('checking-for-update', () => {
